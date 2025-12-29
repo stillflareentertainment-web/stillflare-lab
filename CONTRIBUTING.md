@@ -1,3 +1,5 @@
+# Contributing to Stillflare Lab
+
 Thank you for your interest in Stillflare Lab and the MAAS-HR model.
 
 This project is primarily a **personal R&D lab** for systems, visuals, and HR-safe models.  
@@ -9,8 +11,8 @@ Contributions are welcome in the form of **feedback, ideas, and respectful discu
 
 By interacting with this repository (issues, discussions, or pull requests), you agree to:
 
-- Respect the **non-clinical scope** of MAAS-HR
-- Avoid sharing any **real-world, personally identifiable, or protected health information (PHI)**
+- Respect the **non-clinical scope** of MAAS-HR  
+- Avoid sharing any **real-world, personally identifiable, or protected health information (PHI)**  
 - Keep feedback focused on:
   - clarity,
   - usability,
@@ -18,8 +20,9 @@ By interacting with this repository (issues, discussions, or pull requests), you
   - and systems design
 
 This project is **not** a place for:
-- clinical advice,
-- medical diagnostics,
+
+- clinical advice,  
+- medical diagnostics,  
 - or case-specific mental health discussions.
 
 ---
@@ -51,18 +54,18 @@ Unsolicited PRs may be closed without review to keep the project focused and man
 
 Issues are welcome for:
 
-- Bugs or obvious breakage
-- Confusing language or unclear flows
-- Ideas for HR-friendly reporting, safety, or scope clarity
+- Bugs or obvious breakage  
+- Confusing language or unclear flows  
+- Ideas for HR-friendly reporting, safety, or scope clarity  
 - Suggestions for:
   - better labels,
   - more helpful guidance,
-  - or improved narrative framing
+  - or improved narrative framing  
 
 When opening an issue:
 
-- **Do not** include real names, workplaces, or specific incidents.
-- Keep examples fictional or abstracted.
+- **Do not** include real names, workplaces, or specific incidents.  
+- Keep examples fictional or abstracted.  
 - Focus on patterns, not people.
 
 ---
@@ -73,16 +76,16 @@ MAAS-HR is designed as an **HR / Operations tool**, not a clinical instrument.
 
 Contributions should support:
 
-- schedule and workload awareness,
-- communication and process clarity,
-- safe recovery and break planning,
-- organizational risk visibility,
+- schedule and workload awareness,  
+- communication and process clarity,  
+- safe recovery and break planning,  
+- organizational risk visibility,  
 
 and should **not** push the project toward:
 
-- clinical assessment,
-- individual diagnosis,
-- psychological treatment tools,
+- clinical assessment,  
+- individual diagnosis,  
+- psychological treatment tools,  
 - or health-data processing.
 
 ---
@@ -95,7 +98,7 @@ All contributions are made under the existing project license:
 
 By contributing, you agree that:
 
-- Stillflare retains ownership and may use, modify, or redistribute your contribution as part of the project.
+- Stillflare retains ownership and may use, modify, or redistribute your contribution as part of the project.  
 - You will not claim ownership over the MAAS-HR model, UI structure, or reporting format.
 
 ---
@@ -107,4 +110,3 @@ For questions about scope, collaboration, or usage:
 - Email: **stillflareentertainment@gmail.com**
 
 Thank you for respecting the intent of this lab and helping keep MAAS-HR safe, focused, and useful.
-
