@@ -104,7 +104,7 @@ By contributing, you agree that:
 
 For questions about scope, collaboration, or usage:
 
-- Email: **stillflare.studio@gmail.com**
+- Email: **stillflareentertainment@gmail.com**
 
 Thank you for respecting the intent of this lab and helping keep MAAS-HR safe, focused, and useful.
 
