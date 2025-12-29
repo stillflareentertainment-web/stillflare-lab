@@ -142,6 +142,11 @@ Outputs:
 - Containment trajectory patterns  
 - Non-clinical operational learning tools  
 
+ <p>
+      <a href="maas-hr-advanced.html">
+        Open MAAS-HR Advanced Model (live graph)
+      </a>
+    </p>
 ---
 
 ### 📊 Phase 4 — Longitudinal Organizational Study *(Planned)*
