@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/stillflare-lab-banner.png" width="720" alt="Stillflare Lab Banner">
+  <img src="[assets/stillflare-lab-banner.png"](https://github.com/stillflareentertainment-web/stillflare-lab/blob/main/STILLFLARE%20BANNER.png) width="720" alt="Stillflare Lab Banner">
 </p>
 
 <h1 align="center">Stillflare Lab</h1>
