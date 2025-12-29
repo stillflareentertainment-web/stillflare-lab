@@ -190,8 +190,32 @@
     font-size:12px !important;
   }
 
+  /* Footer inside MAAS console */
+  .maas-footer{
+    margin-top:10px !important;
+    padding-top:8px !important;
+    border-top:1px solid rgba(148,163,184,0.35) !important;
+    font-size:10px !important;
+    line-height:1.5 !important;
+    color:rgba(148,163,184,0.9) !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:4px 16px !important;
+    justify-content:space-between !important;
+  }
+
+  .maas-footer a{
+    color:rgba(148,163,184,0.95) !important;
+    text-decoration:underline !important;
+    text-decoration-thickness:1px !important;
+  }
+
   @media(max-width:800px){
     .maas-grid{grid-template-columns:1fr !important;}
+    .maas-footer{
+      flex-direction:column !important;
+      align-items:flex-start !important;
+    }
   }
 </style>
 
@@ -496,6 +520,22 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- MAAS footer: version, scope, license, contact -->
+    <div class="maas-footer">
+      <div>
+        MAAS-HR v0.2 — Pilot · Stillflare Lab<br>
+        Scope: HR / operations modeling only (schedule, workload, communication, recovery).
+      </div>
+      <div>
+        License:
+        <a href="https://github.com/stillflareentertainment-web/stillflare-lab/blob/main/LICENSE" target="_blank" rel="noopener">
+          Stillflare Public Reference License (SPRL)
+        </a><br>
+        Contact:
+        <a href="mailto:stillflareentertainment@gmail.com">stillflareentertainment@gmail.com</a>
       </div>
     </div>
 
