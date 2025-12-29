@@ -1,0 +1,995 @@
+<style>
+  /* ==============================
+     MAAS · HR Risk Containment Lite
+     Compact block for GoDaddy
+     ============================== */
+
+  .maas-wrap{
+    background:#05070b !important;
+    padding:32px 0 48px !important;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif !important;
+    color:#e8edf5 !important;
+  }
+
+  .maas-page{
+    max-width:980px !important;
+    margin:0 auto !important;
+    padding:0 16px !important;
+    box-sizing:border-box !important;
+  }
+
+  .maas-page *{
+    box-sizing:border-box !important;
+    color:inherit !important;
+  }
+
+  .maas-card{
+    background:#11141b !important;
+    border-radius:14px !important;
+    border:1px solid rgba(255,255,255,0.10) !important;
+    padding:16px 14px 14px !important;
+    margin-bottom:14px !important;
+    box-shadow:0 10px 24px rgba(0,0,0,0.55) !important;
+  }
+
+  .maas-kicker{
+    font-size:10px !important;
+    letter-spacing:0.24em !important;
+    text-transform:uppercase !important;
+    opacity:0.76 !important;
+    margin-bottom:6px !important;
+  }
+
+  .maas-title{
+    font-size:20px !important;
+    font-weight:600 !important;
+    margin:0 0 4px !important;
+  }
+
+  .maas-sub{
+    font-size:12px !important;
+    opacity:0.78 !important;
+    margin:0 0 10px !important;
+  }
+
+  .maas-body{
+    font-size:13px !important;
+    line-height:1.6 !important;
+    margin:0 0 8px !important;
+    opacity:0.9 !important;
+  }
+
+  .maas-list{
+    margin:4px 0 8px !important;
+    padding-left:18px !important;
+    font-size:13px !important;
+    line-height:1.55 !important;
+  }
+
+  .maas-list li+li{margin-top:2px !important;}
+
+  .maas-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) !important;
+    gap:12px !important;
+  }
+
+  .maas-field{
+    margin-bottom:8px !important;
+  }
+
+  .maas-label-row{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    font-size:11px !important;
+    margin-bottom:2px !important;
+  }
+
+  .maas-label{
+    opacity:0.82 !important;
+  }
+
+  .maas-label span{
+    opacity:0.65 !important;
+    font-size:10px !important;
+    margin-left:4px !important;
+  }
+
+  .maas-value{
+    font-size:11px !important;
+    opacity:0.9 !important;
+  }
+
+  .maas-range{
+    width:100% !important;
+  }
+
+  .maas-row{
+    display:flex !important;
+    gap:8px !important;
+  }
+
+  .maas-row > *{flex:1 1 0 !important;}
+
+  .maas-tagline{
+    font-size:11px !important;
+    opacity:0.8 !important;
+    padding:8px 10px !important;
+    border-radius:10px !important;
+    background:#090c11 !important;
+    border:1px solid rgba(255,255,255,0.08) !important;
+    margin-top:6px !important;
+  }
+
+  .maas-small-heading{
+    font-size:12px !important;
+    font-weight:600 !important;
+    margin:8px 0 4px !important;
+  }
+
+  .maas-input,
+  .maas-textarea{
+    width:100% !important;
+    padding:5px 7px !important;
+    border-radius:6px !important;
+    border:1px solid rgba(255,255,255,0.18) !important;
+    background:#05070b !important;
+    font-size:12px !important;
+    color:#e5e7eb !important;
+    resize:vertical !important;
+  }
+
+  .maas-button{
+    display:inline-block !important;
+    padding:6px 12px !important;
+    border-radius:999px !important;
+    border:none !important;
+    background:#2563eb !important;
+    color:#f9fafb !important;
+    font-size:11px !important;
+    font-weight:500 !important;
+    cursor:pointer !important;
+    margin:4px 4px 0 0 !important;
+    text-align:center !important;
+    white-space:nowrap !important;
+  }
+
+  .maas-button.secondary{
+    background:#111827 !important;
+    border:1px solid rgba(255,255,255,0.18) !important;
+  }
+
+  .maas-button:disabled{
+    opacity:0.5 !important;
+    cursor:default !important;
+  }
+
+  .maas-metric-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:6px !important;
+    margin:6px 0 4px !important;
+  }
+
+  .maas-metric{
+    padding:6px 7px !important;
+    border-radius:8px !important;
+    background:#05070b !important;
+    border:1px solid rgba(255,255,255,0.08) !important;
+    font-size:11px !important;
+  }
+
+  .maas-metric-label{
+    opacity:0.65 !important;
+    margin-bottom:2px !important;
+  }
+
+  .maas-metric-value{
+    font-weight:600 !important;
+    font-size:12px !important;
+  }
+
+  @media(max-width:800px){
+    .maas-grid{grid-template-columns:1fr !important;}
+  }
+</style>
+
+<div class="maas-wrap">
+  <div class="maas-page">
+
+    <!-- HEADER / QUICK START -->
+    <div class="maas-card">
+      <div class="maas-kicker">MAAS · HR Risk Containment Hybrid Model</div>
+      <h2 class="maas-title">MAAS – Meta-Awareness Assessment System</h2>
+      <p class="maas-sub">
+        HR-only simulation model for understanding how work patterns create risk — and how to reduce that risk by
+        adjusting schedule, workload, communication, and recovery controls.
+      </p>
+
+      <p class="maas-body"><strong>Quick start (solo use):</strong></p>
+      <ol class="maas-list">
+        <li>Set the sliders to match how this period actually feels on the floor.</li>
+        <li>Select <em>Run Simulation</em> to calculate containment and exposure.</li>
+        <li>Review the top driver and best control, then adjust one or two sliders to test “what if” scenarios.</li>
+        <li>Use the printable summary for HR / operations meetings — no personal medical data required.</li>
+      </ol>
+
+      <div class="maas-tagline">
+        Scope: MAAS-HR works only with operational variables (scheduling, workload, communication, recovery). It
+        is not a clinical or diagnostic tool and should be used for HR / operations planning only.
+      </div>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="maas-grid">
+
+      <!-- LEFT COLUMN · INPUTS & CONTROLS -->
+      <div>
+
+        <div class="maas-card">
+          <div class="maas-kicker">Inputs</div>
+          <div class="maas-title">Workload & Control Sliders</div>
+
+          <!-- RISK DRIVERS -->
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">SV – Schedule Variability<span>rotating shifts, end-times</span></div>
+              <div class="maas-value" id="valSV">5</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="5"
+                   data-code="SV"
+                   data-default="5"
+                   data-target="valSV">
+          </div>
+
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">WL – Workload Intensity<span>volume, pace, physical load</span></div>
+              <div class="maas-value" id="valWL">5</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="5"
+                   data-code="WL"
+                   data-default="5"
+                   data-target="valWL">
+          </div>
+
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">CI – Communication Intensity<span>pressure, escalation</span></div>
+              <div class="maas-value" id="valCI">5</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="5"
+                   data-code="CI"
+                   data-default="5"
+                   data-target="valCI">
+          </div>
+
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">NV – Notice Variability<span>last-minute changes</span></div>
+              <div class="maas-value" id="valNV">5</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="5"
+                   data-code="NV"
+                   data-default="5"
+                   data-target="valNV">
+          </div>
+
+          <!-- CONTROLS -->
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">CL – Clarity Controls<span>expectations, agendas</span></div>
+              <div class="maas-value" id="valCL">6</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="6"
+                   data-code="CL"
+                   data-default="6"
+                   data-target="valCL">
+          </div>
+
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">PR – Process Reliability<span>protocols, channels</span></div>
+              <div class="maas-value" id="valPR">5</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="5"
+                   data-code="PR"
+                   data-default="5"
+                   data-target="valPR">
+          </div>
+
+          <div class="maas-field">
+            <div class="maas-label-row">
+              <div class="maas-label">RC – Recovery Compliance<span>breaks, reset time</span></div>
+              <div class="maas-value" id="valRC">5</div>
+            </div>
+            <input class="maas-range"
+                   type="range" min="0" max="10"
+                   value="5"
+                   data-code="RC"
+                   data-default="5"
+                   data-target="valRC">
+          </div>
+
+          <!-- INITIAL CONDITIONS -->
+          <div class="maas-row">
+            <div class="maas-field">
+              <div class="maas-label-row">
+                <div class="maas-label">Initial Rf (functioning risk)</div>
+              </div>
+              <input class="maas-input"
+                     id="initRf"
+                     type="number"
+                     value="25"
+                     data-default="25">
+            </div>
+            <div class="maas-field">
+              <div class="maas-label-row">
+                <div class="maas-label">Initial Ro (org. risk)</div>
+              </div>
+              <input class="maas-input"
+                     id="initRo"
+                     type="number"
+                     value="20"
+                     data-default="20">
+            </div>
+            <div class="maas-field">
+              <div class="maas-label-row">
+                <div class="maas-label">Days to simulate</div>
+              </div>
+              <input class="maas-input"
+                     id="simDays"
+                     type="number"
+                     value="60"
+                     data-default="60">
+            </div>
+          </div>
+
+          <div>
+            <button class="maas-button" id="maasRunBtn" type="button">Run Simulation</button>
+            <button class="maas-button secondary" id="maasResetBtn" type="button">Reset</button>
+          </div>
+        </div>
+
+        <div class="maas-card">
+          <div class="maas-kicker">Success Criteria</div>
+          <div class="maas-title">HR Targets → Model Targets</div>
+
+          <p class="maas-body">
+            Record the HR outcome you care about, then link it to model targets for exposure and containment.
+          </p>
+
+          <div class="maas-small-heading">HR expectation (plain)</div>
+          <input class="maas-input"
+                 id="hrExpectation"
+                 type="text"
+                 placeholder="Example: &quot;Zero tardies for 60 days&quot;"
+                 data-default="">
+
+          <div class="maas-row">
+            <div class="maas-field">
+              <div class="maas-small-heading">Evaluation window (days)</div>
+              <input class="maas-input"
+                     id="evalDays"
+                     type="number"
+                     value="60"
+                     data-default="60">
+            </div>
+            <div class="maas-field">
+              <div class="maas-small-heading">Target exposure reduction %</div>
+              <input class="maas-input"
+                     id="targetE"
+                     type="number"
+                     value="20"
+                     data-default="20">
+            </div>
+            <div class="maas-field">
+              <div class="maas-small-heading">Min containment C(t)</div>
+              <input class="maas-input"
+                     id="targetC"
+                     type="number"
+                     value="0.10"
+                     step="0.01"
+                     data-default="0.10">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN · RESULTS & REPORT -->
+      <div>
+
+        <div class="maas-card">
+          <div class="maas-kicker">Results</div>
+          <div class="maas-title">Containment & Exposure Snapshot</div>
+
+          <div class="maas-metric-grid">
+            <div class="maas-metric">
+              <div class="maas-metric-label">Containment score C(t)</div>
+              <div class="maas-metric-value" id="metricC">0.000</div>
+            </div>
+            <div class="maas-metric">
+              <div class="maas-metric-label">Exposure E</div>
+              <div class="maas-metric-value" id="metricE">0.0</div>
+            </div>
+            <div class="maas-metric">
+              <div class="maas-metric-label">Current Rf (functioning risk)</div>
+              <div class="maas-metric-value" id="metricRf">0.0</div>
+            </div>
+            <div class="maas-metric">
+              <div class="maas-metric-label">Current Ro (org. risk)</div>
+              <div class="maas-metric-value" id="metricRo">0.0</div>
+            </div>
+          </div>
+
+          <div class="maas-small-heading">Recommendation (highest leverage)</div>
+          <p class="maas-body" id="recText">
+            Run a simulation to generate a driver / control recommendation.
+          </p>
+
+          <div class="maas-row">
+            <div class="maas-field">
+              <div class="maas-small-heading">Top driver</div>
+              <input class="maas-input" id="topDriver" type="text" readonly>
+            </div>
+            <div class="maas-field">
+              <div class="maas-small-heading">Best control</div>
+              <input class="maas-input" id="bestControl" type="text" readonly>
+            </div>
+          </div>
+
+          <div class="maas-small-heading">Narrative guidance</div>
+          <textarea class="maas-textarea"
+                    id="narrative"
+                    rows="4"
+                    data-default=""
+                    placeholder="Example: Stable — push with structure; tighten clarity controls and protect recovery windows."></textarea>
+        </div>
+
+        <div class="maas-card">
+          <div class="maas-kicker">Printable Output</div>
+          <div class="maas-title">Summary & Report Text</div>
+
+          <p class="maas-body">
+            Use this section to generate a detailed, HR-friendly summary. The same content can be printed as a packet
+            or copied into email, HR tickets, or follow-up documentation.
+          </p>
+
+          <div class="maas-small-heading">Print title</div>
+          <input class="maas-input"
+                 id="printTitle"
+                 type="text"
+                 placeholder="MAAS · HR Risk Containment Summary"
+                 data-default="MAAS · HR Risk Containment Summary">
+
+          <div class="maas-small-heading">Prepared by / Department</div>
+          <input class="maas-input"
+                 id="preparedBy"
+                 type="text"
+                 placeholder="Justin M. — Operations / HR, [Department / Location]"
+                 data-default="">
+
+          <div class="maas-small-heading">Information (appears on summary)</div>
+          <textarea class="maas-textarea"
+                    id="printInfo"
+                    rows="4"
+                    data-default=""
+                    placeholder="- Month context: baseline or event-heavy&#10;- Key schedule / workload shifts&#10;- Any known HR actions or constraints"></textarea>
+
+          <div style="margin-top:6px;">
+            <button class="maas-button" id="maasPrintBtn" type="button">Generate Printable Summary</button>
+            <button class="maas-button secondary" id="maasCopyBtn" type="button">Copy Report Text</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    // Map slider codes to labels for reporting
+    var codeToLabel = {
+      SV:'SV – Schedule Variability (rotating shifts, uncertain end-times)',
+      WL:'WL – Workload Intensity (volume, pace, physical demand)',
+      CI:'CI – Communication Intensity (pressure, escalation, frequency)',
+      NV:'NV – Notice Variability (last-minute changes, unclear timing)',
+      CL:'CL – Clarity Controls (expectations, agendas, written protocols)',
+      PR:'PR – Process Reliability (channels, checklists, repeatability)',
+      RC:'RC – Recovery Compliance (breaks, rest windows, reset time)'
+    };
+
+    function escapeHtml(str){
+      return String(str || '')
+        .replace(/&/g,'&amp;')
+        .replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;')
+        .replace(/"/g,'&quot;')
+        .replace(/'/g,'&#39;');
+    }
+
+    // --------- MAAS HR recommendation logic (Section 6) ----------
+    function buildHrRecommendation(data){
+      // If model has not been run yet
+      if(data.C === 0 && data.E === 0 && data.Rf === 0 && data.Ro === 0){
+        return {
+          heading: 'Simulation not yet run',
+          bullets: [
+            'Run MAAS simulation before treating this report as decision-ready.',
+            'Update sliders to reflect actual conditions for the period being reviewed.',
+            'Regenerate the summary so the HR recommendation reflects current conditions.'
+          ]
+        };
+      }
+
+      var highExposure   = data.E >= 2.5;
+      var moderateExp    = data.E >= 1.0 && data.E < 2.5;
+      var lowExposure    = data.E < 1.0;
+
+      var weakContain    = data.C < 0.30;
+      var midContain     = data.C >= 0.30 && data.C < 0.60;
+      var strongContain  = data.C >= 0.60;
+
+      var highRf = data.Rf > 55;
+      var highRo = data.Ro > 55;
+
+      var heading;
+      var bullets = [];
+
+      var driver   = data.topDriver || 'Not yet identified';
+      var control  = data.bestControl || 'Not yet identified';
+
+      if( (highExposure && weakContain) || highRf || highRo ){
+        heading = 'High-risk period – immediate containment focus (HR-only).';
+        bullets.push(
+          'Freeze nonessential initiatives for this period and redirect attention to schedule, coverage, and clarity.',
+          'Use ' + control + ' as the first lever: tighten expectations, written protocols, and how shifts are briefed.',
+          'Protect recovery: guard breaks, reset windows, and no-coverage gaps to counteract high ' + driver + '.',
+          'Set a 30-day containment target tied to your HR expectation, such as absence or incident reduction.'
+        );
+      } else if(moderateExp || midContain){
+        heading = 'Elevated pressure – tighten structure and monitor.';
+        bullets.push(
+          'Document the current pattern of ' + driver + ' and communicate one clear expectation change to staff.',
+          'Strengthen ' + control + ' using tools HR already owns: schedules, agendas, checklists, and short huddles.',
+          'Schedule a 30- to 60-day review to compare Rf/Ro and decide whether to escalate controls or ease them.',
+          'Keep MAAS as a standing item in HR/operations meetings during this window.'
+        );
+      } else if(lowExposure && strongContain){
+        heading = 'Stable period – protect what works and capture it in policy.';
+        bullets.push(
+          'Record the practices that are supporting strong containment, especially those tied to ' + control + '.',
+          'Use this window to close small gaps in ' + driver + ' without adding major new programs.',
+          'Consider piloting one low-risk experiment and track its effect on Rf and Ro over a short window.',
+          'Save this MAAS packet as a reference healthy month for future comparisons.'
+        );
+      } else {
+        heading = 'Mixed pattern – targeted adjustments recommended.';
+        bullets.push(
+          'Clarify how ' + driver + ' is experienced by staff through a short survey or listening session.',
+          'Choose one change in ' + control + ' that HR can implement immediately, such as a checklist or agenda rule.',
+          'Run MAAS again after the change has been active for at least one evaluation window.',
+          'Use the difference in Rf/Ro and exposure E as talking points with leadership.'
+        );
+      }
+
+      return { heading: heading, bullets: bullets };
+    }
+
+    // --- Helper: update slider value labels ---
+    function attachSliderListeners(){
+      var sliders = document.querySelectorAll('.maas-range');
+      sliders.forEach(function(slider){
+        var targetId = slider.getAttribute('data-target');
+        var target = targetId ? document.getElementById(targetId) : null;
+        if(target){
+          slider.addEventListener('input', function(){
+            target.textContent = slider.value;
+          });
+        }
+      });
+    }
+
+    // --- Collect all data in one place for printing / copy ---
+    function getSummaryData(){
+      var sliders = {};
+      document.querySelectorAll('.maas-range').forEach(function(slider){
+        var code = slider.getAttribute('data-code');
+        sliders[code] = Number(slider.value || 0);
+      });
+
+      var driverCodes   = ['SV','WL','CI','NV'];
+      var controlCodes  = ['CL','PR','RC'];
+
+      var driverSum  = driverCodes.reduce(function(sum,c){return sum + (sliders[c]||0);},0);
+      var controlSum = controlCodes.reduce(function(sum,c){return sum + (sliders[c]||0);},0);
+
+      var initRf = Number(document.getElementById('initRf').value || 0);
+      var initRo = Number(document.getElementById('initRo').value || 0);
+      var days   = Math.max(1, Number(document.getElementById('simDays').value || 1));
+
+      var C  = Number(document.getElementById('metricC').textContent || 0);
+      var E  = Number(document.getElementById('metricE').textContent || 0);
+      var Rf = Number(document.getElementById('metricRf').textContent || 0);
+      var Ro = Number(document.getElementById('metricRo').textContent || 0);
+
+      var topDriver   = document.getElementById('topDriver').value || '';
+      var bestControl = document.getElementById('bestControl').value || '';
+
+      var now = new Date();
+      var timestamp = now.toLocaleString ? now.toLocaleString() : now.toString();
+
+      return {
+        title: document.getElementById('printTitle').value || 'MAAS · HR Risk Containment Summary',
+        preparedBy: document.getElementById('preparedBy').value || '',
+        info: document.getElementById('printInfo').value || '',
+        C:C, E:E, Rf:Rf, Ro:Ro,
+        sliders: sliders,
+        driverCodes: driverCodes,
+        controlCodes: controlCodes,
+        driverSum: driverSum,
+        controlSum: controlSum,
+        initRf:initRf,
+        initRo:initRo,
+        days:days,
+        topDriver: topDriver || 'Not yet identified',
+        bestControl: bestControl || 'Not yet identified',
+        narrative: document.getElementById('narrative').value || '',
+        hrExpectation: document.getElementById('hrExpectation').value || '',
+        evalDays: document.getElementById('evalDays').value || '',
+        targetE: document.getElementById('targetE').value || '',
+        targetC: document.getElementById('targetC').value || '',
+        timestamp: timestamp
+      };
+    }
+
+    // --- Compute simple metrics (front-end only; illustrative) ---
+    function runSimulation(){
+      var data = getSummaryData();
+      var sliders = data.sliders;
+      var driverCodes = data.driverCodes;
+      var controlCodes = data.controlCodes;
+
+      var driverSum  = data.driverSum;
+      var controlSum = data.controlSum;
+
+      var initRf = data.initRf;
+      var initRo = data.initRo;
+      var days   = data.days;
+
+      var containment = controlSum / (controlCodes.length * 10);      // 0–1
+      var exposure    = Math.max(0, (driverSum - controlSum/1.3)) / 10;
+
+      var rf = initRf + exposure*days*0.05 - containment*days*0.08;
+      var ro = initRo + exposure*days*0.03 - containment*days*0.05;
+
+      function clamp(val,min,max){return Math.min(max,Math.max(min,val));}
+      containment = clamp(containment,0,1);
+      exposure    = clamp(exposure,0,10);
+      rf          = clamp(rf,0,100);
+      ro          = clamp(ro,0,100);
+
+      document.getElementById('metricC').textContent  = containment.toFixed(3);
+      document.getElementById('metricE').textContent  = exposure.toFixed(1);
+      document.getElementById('metricRf').textContent = rf.toFixed(1);
+      document.getElementById('metricRo').textContent = ro.toFixed(1);
+
+      // Recommendation: pick highest driver and strongest control
+      var topDriverCode = driverCodes.reduce(function(best,c){
+        return (sliders[c]||0) > (sliders[best]||0) ? c : best;
+      }, driverCodes[0]);
+
+      var bestControlCode = controlCodes.reduce(function(best,c){
+        return (sliders[c]||0) > (sliders[best]||0) ? c : best;
+      }, controlCodes[0]);
+
+      var topDriverLabel   = codeToLabel[topDriverCode]   || topDriverCode;
+      var bestControlLabel = codeToLabel[bestControlCode] || bestControlCode;
+
+      document.getElementById('topDriver').value   = topDriverLabel;
+      document.getElementById('bestControl').value = bestControlLabel;
+
+      var rec =
+        'Highest pressure at the moment is coming from ' + topDriverLabel +
+        '. The most effective lever you currently have is ' + bestControlLabel +
+        '. Start by adjusting this control before adding new initiatives.';
+      document.getElementById('recText').textContent = rec;
+
+      // Auto-fill narrative if empty
+      var narrative = document.getElementById('narrative');
+      if(!narrative.value.trim()){
+        narrative.value =
+          'Model view: containment C(t) = ' + containment.toFixed(3) +
+          ', exposure E = ' + exposure.toFixed(1) + '. ' +
+          'Functioning risk Rf is at ' + rf.toFixed(1) +
+          ' and organizational risk Ro is at ' + ro.toFixed(1) + '. ' +
+          'Primary driver: ' + topDriverLabel +
+          '. Highest leverage control: ' + bestControlLabel + '.';
+      }
+    }
+
+    // --- Reset all fields to data-default values ---
+    function resetForm(){
+      document.querySelectorAll('.maas-range').forEach(function(slider){
+        var def = slider.getAttribute('data-default');
+        if(def !== null){
+          slider.value = def;
+          var targetId = slider.getAttribute('data-target');
+          var target = targetId ? document.getElementById(targetId) : null;
+          if(target){ target.textContent = def; }
+        }
+      });
+
+      document.querySelectorAll('.maas-input, .maas-textarea').forEach(function(input){
+        var def = input.getAttribute('data-default');
+        if(def !== null){
+          input.value = def;
+        }else if(input.tagName === 'TEXTAREA'){
+          input.value = '';
+        }
+      });
+
+      document.getElementById('metricC').textContent  = '0.000';
+      document.getElementById('metricE').textContent  = '0.0';
+      document.getElementById('metricRf').textContent = '0.0';
+      document.getElementById('metricRo').textContent = '0.0';
+      document.getElementById('topDriver').value      = '';
+      document.getElementById('bestControl').value    = '';
+      document.getElementById('recText').textContent  =
+        'Run a simulation to generate a driver / control recommendation.';
+    }
+
+    // --- Build detailed text summary for copy (plain text HR packet) ---
+    function buildSummaryText(){
+      var d = getSummaryData();
+      var rec = buildHrRecommendation(d);
+
+      // Slider lines
+      var sliderLines = [];
+      Object.keys(d.sliders).forEach(function(code){
+        var label = codeToLabel[code] || code;
+        sliderLines.push('  - ' + label + ': ' + d.sliders[code] + '/10');
+      });
+
+      var txt  = '';
+      txt += d.title + '\n';
+      txt += 'Prepared by: ' + (d.preparedBy || 'Justin M. — Operations / HR, [Department / Location]') + '\n';
+      txt += 'Reporting period: ______________________________\n';
+      txt += 'Generated: ' + d.timestamp + '\n';
+      txt += 'Model: MAAS · HR Risk Containment Hybrid (HR-only variables)\n';
+      txt += '\n';
+
+      txt += 'SECTION 1 – MODEL SNAPSHOT\n';
+      txt += '  • Containment C(t): ' + d.C + '   (closer to 1.0 = stronger containment)\n';
+      txt += '  • Exposure E: ' + d.E + '         (higher values = more sustained risk load)\n';
+      txt += '  • Functioning risk Rf: ' + d.Rf + '\n';
+      txt += '  • Organizational risk Ro: ' + d.Ro + '\n';
+      txt += '  Interpretation: C(t) in the 0.30–0.60 range indicates partial containment; values above 0.60 indicate strong containment. Exposure E above 1.0 indicates elevated sustained load.\n\n';
+
+      txt += 'SECTION 2 – OPERATIONAL PATTERN (SLIDER VIEW)\n';
+      if(sliderLines.length){
+        txt += sliderLines.join('\n') + '\n\n';
+      }else{
+        txt += '  (No slider values recorded.)\n\n';
+      }
+
+      txt += 'SECTION 3 – HR EXPECTATION & SUCCESS WINDOW\n';
+      txt += '  • Stated expectation: ' +
+             (d.hrExpectation || '(not recorded)') + '\n';
+      if(d.evalDays){
+        txt += '  • Evaluation window: ' + d.evalDays + ' day(s)\n';
+      }
+      if(d.targetE){
+        txt += '  • Target exposure reduction (E): ' + d.targetE + '%\n';
+      }
+      if(d.targetC){
+        txt += '  • Minimum containment target C(t): ' + d.targetC + '\n';
+      }
+      txt += '\n';
+
+      txt += 'SECTION 4 – DRIVER & CONTROL FOCUS\n';
+      txt += '  • Highest pressure driver: ' + d.topDriver + '\n';
+      txt += '  • Most effective control lever: ' + d.bestControl + '\n';
+      txt += '  • Practical reading: reduce risk first by strengthening the control lever listed above\n';
+      txt += '    before adding new policies, programs, or staff.\n\n';
+
+      txt += 'SECTION 5 – NARRATIVE GUIDANCE (MAAS INTERPRETATION)\n';
+      if(d.narrative){
+        txt += d.narrative + '\n\n';
+      }else{
+        txt += '  (No narrative guidance recorded — add a short paragraph in the MAAS panel before exporting.)\n\n';
+      }
+
+      txt += 'SECTION 6 – CONTEXT NOTES & MAAS HR RECOMMENDATION\n';
+      txt += '  Recommended actions are HR / operations controls only (schedule, workload, communication, recovery). No clinical or medical decisions should be made from this report.\n';
+      txt += '  MAAS HR recommendation (auto-generated, HR-only):\n';
+      txt += '    - ' + rec.heading + '\n';
+      rec.bullets.forEach(function(b){
+        txt += '    - ' + b + '\n';
+      });
+
+      txt += '\n  Additional context notes:\n';
+      if(d.info){
+        d.info.split(/\r?\n/).forEach(function(line){
+          txt += '    ' + line + '\n';
+        });
+      }else{
+        txt += '    (No additional context notes provided.)\n';
+      }
+
+      txt += '\nSignature / review: _____________________________   Date: ____________\n';
+      txt += '\n—— End of MAAS HR packet ——\n';
+      return txt;
+    }
+
+    // --- HTML version for print window (HR-packet layout + MAAS styling) ---
+    function buildSummaryHTML(){
+      var d = getSummaryData();
+      var rec = buildHrRecommendation(d);
+
+      var sliderRows = '';
+      Object.keys(d.sliders).forEach(function(code){
+        var label = codeToLabel[code] || code;
+        sliderRows += '<tr>' +
+          '<td class="label">' + escapeHtml(label) + '</td>' +
+          '<td class="value">' + escapeHtml(d.sliders[code] + '/10') + '</td>' +
+        '</tr>';
+      });
+
+      var ctxNotes = d.info ? escapeHtml(d.info).replace(/\n/g,'<br>') : '<em>No additional context notes provided.</em>';
+      var narrative = d.narrative
+        ? escapeHtml(d.narrative).replace(/\n/g,'<br>')
+        : '<em>No narrative guidance recorded — add a short paragraph in the MAAS panel before exporting.</em>';
+
+      var hrExpectation = d.hrExpectation
+        ? escapeHtml(d.hrExpectation)
+        : '<em>Not recorded</em>';
+
+      var recBulletsHtml = rec.bullets.map(function(b){
+        return '<li>' + escapeHtml(b) + '</li>';
+      }).join('');
+
+      var html = ''
+        + '<!DOCTYPE html>'
+        + '<html><head><meta charset="utf-8">'
+        + '<title>' + escapeHtml(d.title) + '</title>'
+        + '<style>'
+        + 'body{margin:0;padding:32px;background:#0b0c10;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#0f172a;}'
+        + '.sheet{max-width:800px;margin:0 auto;background:#ffffff;border-radius:14px;box-shadow:0 18px 45px rgba(15,23,42,0.28);padding:28px 32px;}'
+        + '.masthead{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#6b7280;margin-bottom:4px;}'
+        + '.title{font-size:20px;font-weight:600;color:#111827;margin:0 0 2px;}'
+        + '.subtitle{font-size:13px;color:#4b5563;margin:0 0 16px;}'
+        + '.meta{font-size:11px;color:#6b7280;margin-bottom:18px;}'
+        + '.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;border:1px solid #e5e7eb;background:#f9fafb;margin-bottom:14px;}'
+        + 'h2.section-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.14em;color:#374151;margin:18px 0 8px;}'
+        + 'p,li{font-size:13px;line-height:1.6;color:#111827;margin:0 0 4px;}'
+        + 'ul{padding-left:18px;margin:0 0 6px;}'
+        + 'table.metrics{width:100%;border-collapse:collapse;margin:4px 0 10px;}'
+        + 'table.metrics th,table.metrics td{font-size:13px;padding:4px 4px;text-align:left;}'
+        + 'table.metrics th{font-weight:600;color:#374151;border-bottom:1px solid #e5e7eb;}'
+        + 'table.metrics td.label{color:#4b5563;width:72%;}'
+        + 'table.metrics td.value{font-weight:500;color:#111827;}'
+        + '.callout{border-radius:10px;border:1px solid #e5e7eb;background:#f9fafb;padding:10px 12px;margin:6px 0 10px;}'
+        + '.footer-note{font-size:11px;color:#6b7280;margin-top:18px;border-top:1px dashed #e5e7eb;padding-top:8px;}'
+        + '.maas-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#6b7280;}'
+        + '@page{margin:20mm;}'
+        + '</style></head><body>'
+        + '<div class="sheet">'
+        + '<div class="masthead">MAAS · HR RISK CONTAINMENT HYBRID MODEL</div>'
+        + '<h1 class="title">' + escapeHtml(d.title) + '</h1>'
+        + '<p class="subtitle">Operational risk snapshot generated using the Meta-Awareness Assessment System (MAAS-HR).</p>'
+        + '<div class="meta">'
+        + 'Generated: ' + escapeHtml(d.timestamp) + '<br>'
+        + 'Prepared by: ' + escapeHtml(d.preparedBy || 'Justin M. — Operations / HR, [Department / Location]') + '<br>'
+        + 'Reporting period: ______________________________'
+        + '</div>'
+
+        + '<div class="badge">Section 1 · Model Snapshot</div>'
+        + '<table class="metrics">'
+        + '<tr><th>Metric</th><th>Value</th></tr>'
+        + '<tr><td class="label">Containment score C(t)<br><span class="maas-tag">Closer to 1.0 = stronger containment</span></td><td class="value">' + escapeHtml(d.C.toFixed(3)) + '</td></tr>'
+        + '<tr><td class="label">Exposure E<br><span class="maas-tag">Higher values = more sustained risk load</span></td><td class="value">' + escapeHtml(d.E.toFixed(1)) + '</td></tr>'
+        + '<tr><td class="label">Functioning risk Rf</td><td class="value">' + escapeHtml(d.Rf.toFixed(1)) + '</td></tr>'
+        + '<tr><td class="label">Organizational risk Ro</td><td class="value">' + escapeHtml(d.Ro.toFixed(1)) + '</td></tr>'
+        + '</table>'
+        + '<div class="callout"><strong>Interpretation (traffic light):</strong> C(t) in the 0.30–0.60 range suggests partial containment. Values above 0.60 indicate strong containment. Exposure E above 1.0 indicates elevated sustained load for staff.</div>'
+
+        + '<h2 class="section-title">Section 2 · Operational pattern (slider view)</h2>'
+        + '<table class="metrics">'
+        + '<tr><th>Dimension</th><th>Level (0–10)</th></tr>'
+        + sliderRows
+        + '</table>'
+
+        + '<h2 class="section-title">Section 3 · HR expectation & success window</h2>'
+        + '<div class="callout">'
+        + '<p><strong>Stated expectation</strong><br>' + hrExpectation + '</p>'
+        + '<p><strong>Evaluation window</strong>: ' + (d.evalDays ? escapeHtml(d.evalDays + ' day(s)') : '<em>Not specified</em>') + '</p>'
+        + '<p><strong>Target exposure reduction (E)</strong>: ' + (d.targetE ? escapeHtml(d.targetE + '%') : '<em>Not specified</em>') + '</p>'
+        + '<p><strong>Minimum containment target C(t)</strong>: ' + (d.targetC ? escapeHtml(d.targetC) : '<em>Not specified</em>') + '</p>'
+        + '</div>'
+
+        + '<h2 class="section-title">Section 4 · Driver & control focus</h2>'
+        + '<p><strong>Highest pressure driver</strong><br>' + escapeHtml(d.topDriver) + '</p>'
+        + '<p><strong>Most effective control lever</strong><br>' + escapeHtml(d.bestControl) + '</p>'
+        + '<p class="callout">Practical reading: reduce risk first by strengthening the control lever listed above '
+        + 'before adding new policies, programs, or staff.</p>'
+
+        + '<h2 class="section-title">Section 5 · Narrative guidance (MAAS interpretation)</h2>'
+        + '<p>' + narrative + '</p>'
+
+        + '<h2 class="section-title">Section 6 · Context notes & MAAS HR recommendation</h2>'
+        + '<div class="callout">'
+        + '<p><strong>Recommended actions are HR / operations controls only.</strong><br>Use MAAS output to adjust schedule, workload, communication, and recovery structure. No clinical or medical decisions should be made from this report.</p>'
+        + '<p style="margin-top:8px;"><strong>' + escapeHtml(rec.heading) + '</strong></p>'
+        + '<ul>' + recBulletsHtml + '</ul>'
+        + '</div>'
+        + '<p><strong>Additional context notes</strong></p>'
+        + '<p>' + ctxNotes + '</p>'
+
+        + '<div class="footer-note">'
+        + 'MAAS-HR works only with operational variables (scheduling, workload, communication, recovery). '
+        + 'It is an HR / operations tool and is not intended for clinical diagnosis or individual medical decision-making.'
+        + '</div>'
+        + '<div class="meta" style="margin-top:16px;">Reviewed by: _____________________________ &nbsp;&nbsp; Date: ____________</div>'
+
+        + '</div></body></html>';
+
+      return html;
+    }
+
+    function handlePrint(){
+      var html = buildSummaryHTML();
+      var w = window.open('', '_blank');
+      if(!w){ alert('Popup blocked. Please allow popups for print preview.'); return; }
+      w.document.write(html);
+      w.document.close();
+      w.focus();
+      try{ w.print(); }catch(e){}
+    }
+
+    function handleCopy(){
+      var text = buildSummaryText();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          alert('MAAS report text copied to clipboard.');
+        }).catch(function(){
+          alert('Unable to copy automatically. You can select and copy from the printable summary instead.');
+        });
+      }else{
+        alert('Clipboard not available in this browser. Use the printable summary to copy manually.');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      attachSliderListeners();
+
+      var runBtn   = document.getElementById('maasRunBtn');
+      var resetBtn = document.getElementById('maasResetBtn');
+      var printBtn = document.getElementById('maasPrintBtn');
+      var copyBtn  = document.getElementById('maasCopyBtn');
+
+      if(runBtn)   runBtn.addEventListener('click', runSimulation);
+      if(resetBtn) resetBtn.addEventListener('click', resetForm);
+      if(printBtn) printBtn.addEventListener('click', handlePrint);
+      if(copyBtn)  copyBtn.addEventListener('click', handleCopy);
+
+      resetForm(); // initialize defaults
+    });
+  })();
+</script>
