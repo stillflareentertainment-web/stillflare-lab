@@ -17,3 +17,4 @@ This project hosts live prototypes for the **MAAS engine** and other Stillflare-
 Think of it as a working studio — where models, UI experiments, and HR-safe consoles evolve in public.
 
 ---
+**License:** Stillflare Public Reference License — Source-visible, not for commercial reuse.
