@@ -16,5 +16,7 @@
 This project hosts live prototypes for the **MAAS engine** and other Stillflare-built systems.  
 Think of it as a working studio — where models, UI experiments, and HR-safe consoles evolve in public.
 
+MAAS-HR supports HR and operational awareness.
+It does not evaluate mental health, diagnose individuals, or support clinical decision-making.
 ---
 **License:** Stillflare Public Reference License — Source-visible, not for commercial reuse.
