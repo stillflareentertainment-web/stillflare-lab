@@ -1,8 +1,18 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/stillflareentertainment-web/stillflare-lab/main/STILLFLARE%20BANNER.png" 
-       width="820" 
+       width="960" 
        alt="Stillflare Lab Banner">
 </p>
+
+<h1 align="center">Stillflare Lab</h1>
+
+<p align="center">
+  <strong>Experimental web lab for Stillflare systems, visuals, and models.</strong><br>
+  <em>Current release: MAAS-HR v0.2 — Pilot</em>
+</p>
+
+---
+
 </p>
 
 <h1 align="center">Stillflare Lab</h1>
