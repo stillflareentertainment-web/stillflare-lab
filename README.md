@@ -1,4 +1,9 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/stillflareentertainment-web/stillflare-lab/main/STILLFLARE%20BANNER.png" 
+       width="820" 
+       alt="Stillflare Lab Banner">
+</p>
+<p align="center">
   <img src="[assets/stillflare-lab-banner.png"](https://github.com/stillflareentertainment-web/stillflare-lab/blob/main/STILLFLARE%20BANNER.png) width="720" alt="Stillflare Lab Banner">
 </p>
 
